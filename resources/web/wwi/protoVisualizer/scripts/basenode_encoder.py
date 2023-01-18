@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Use to regenerate the FieldModel.js
+
 import os
 import re
 import json

@@ -102,7 +102,7 @@ export default class Parameter {
 
   insertNode(view, v, index) {
     if (this.type !== VRML.MFNode)
-      throw new Error('Item insertion is possible only for MFNodes.')
+      throw new Error('Item insertion is possible only for MFNodes.');
 
     for (const link of this.parameterLinks)
       link.insertNode(view, v.clone(), index);

@@ -156,7 +156,8 @@ export default class WbCylinder extends WbGeometry {
     this._computeWrenRenderable();
 
     const createOutlineMesh = this.isInBoundingObject();
-    this._wrenMesh = _wr_static_mesh_unit_cylinder_new(this.#subdivision, this.#side, this.#top, this.#bottom, createOutlineMesh);
+    this._wrenMesh = _wr_static_mesh_unit_cylinder_new(this.#subdivision, this.#side, this.#top, this.#bottom,
+      createOutlineMesh);
 
     if (createOutlineMesh)
       this.#updateLineScale();
@@ -212,6 +213,6 @@ export default class WbCylinder extends WbGeometry {
 
     const offset = _wr_config_get_line_scale() / WbGeometry.LINE_SCALE_FACTOR;
     _wr_transform_set_scale(this.wrenNode, _wrjs_array3(this.#radius * (1.0 + offset), this.#radius * (1.0 + offset),
-    this.#height * (1.0 + offset)));
+      this.#height * (1.0 + offset)));
   }
 }
